@@ -6,6 +6,7 @@ import { ReportsModule } from './reports/reports.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './users/user.entity';
 import { Report } from './reports/report.entity';
+import { ImageModule } from './image/image.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { Report } from './reports/report.entity';
       entities: [User, Report],
       synchronize: true,
     }),
+    ImageModule,
   ],
   controllers: [AppController],
   providers: [AppService],
